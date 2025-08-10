@@ -1,0 +1,9 @@
+docker build -t my-fastapi-backend-book .
+docker run -d -p 8000:8000 --name fastapi-backend-apibook -e MONGO_URL="mongodb+srv://BerserkLegend:Vo9oCMJJjTzJgQNN@cluster1.bt5napi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster1" my-fastapi-backend-book
+docker ps
+docker stop fastapi-backend-apibook 
+docker rm fastapi-backend-apibook 
+
+
+docker build -t my-fastapi-frontend-book .
+docker run -d -p 5173:80 --name fastapi-frontend-apibook my-fastapi-frontend-book
